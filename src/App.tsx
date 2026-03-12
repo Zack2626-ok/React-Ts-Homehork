@@ -1,16 +1,17 @@
-import { Button, Input, Layout, Form, Modal } from "antd";
-import { Content, Footer, Header } from "antd/es/layout/layout";
-import { useState } from "react";
+// import { Button, Input, Layout, Form, Modal } from "antd";
+// import { Content, Footer, Header } from "antd/es/layout/layout";
+// import { useState } from "react";
 
 import { Toaster } from "react-hot-toast";
 import { Link, Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
+import Lap2 from "./lap2/lap2";
 function App() {
-  const onFinish = (value: number | string) => {
-    console.log("hello");
-    console.log(value);
-  };
-  const [open, setOpen] = useState(false);
+  // const onFinish = (value: number | string) => {
+  //   console.log("hello");
+  //   console.log(value);
+  // };
+  // const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -30,6 +31,9 @@ function App() {
             <Link to="/add" className="hover:text-gray-200">
               Thêm mới
             </Link>
+            <Link to="/lap2" className="hover:text-gray-200">
+              lap2
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
@@ -47,7 +51,7 @@ function App() {
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
 
-        <Button type="primary">Click me</Button>
+        {/* <Button type="primary">Click me</Button>
         <Button type="default">Click me</Button>
         <Button type="dashed">Click me</Button>
         <Button type="link">Click me</Button>
@@ -79,15 +83,14 @@ function App() {
           onOk={() => setOpen(false)}
         >
           Nội dung modal
-        </Modal>
+        </Modal> */}
       </div>
 
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/lap2" element={<Lap2 />} />
       </Routes>
       <Toaster />
-
-      <h2 className="text-4xl font-bold mb-4">lap 2</h2>
     </>
   );
 }
