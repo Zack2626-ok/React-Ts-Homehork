@@ -1,16 +1,59 @@
-import { Button, Input, Layout, Form, Modal } from "antd";
+import { Button, Input, Layout, Form, Modal, Table } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import { useState } from "react";
 
 import { Toaster } from "react-hot-toast";
 import { Link, Route, Routes } from "react-router-dom";
-import Dashboard from "./dashboard";
+import Dashboard from "./Dashboard";
 function App() {
   const onFinish = (value: number | string) => {
     console.log("hello");
     console.log(value);
   };
   const [open, setOpen] = useState(false);
+
+  const column = [
+    {
+      title: "Id",
+      dataIndex: "id",
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+    },
+    {
+      title: "Major",
+      dataIndex: "major",
+    },
+  ];
+
+  const data = [
+    {
+      key: 1,
+      id: 1,
+      name: "van huy",
+      age: 20,
+      major: "IT",
+    },
+    {
+      key: 2,
+      id: 2,
+      name: "Linh",
+      age: 21,
+      major: "Business",
+    },
+    {
+      key: 3,
+      id: 3,
+      name: "Hà",
+      age: 24,
+      major: "Design",
+    },
+  ];
   return (
     <>
       <nav className="bg-blue-600 text-white shadow">
@@ -85,6 +128,10 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Toaster />
+
+      <h2 className="text-4xl font-bold mb-4">lap 2</h2>
+
+      <Table columns={column} dataSource={data} />
     </>
   );
 }
