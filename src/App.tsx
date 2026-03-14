@@ -6,6 +6,9 @@ import { Toaster } from "react-hot-toast";
 import { Link, Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Lap2 from "./lap2/lap2";
+import LoginForm from "./lap3/Login";
+import Register from "./lap3/Register";
+import AddPro from "./lap3/AddPro";
 function App() {
   // const onFinish = (value: number | string) => {
   //   console.log("hello");
@@ -34,13 +37,16 @@ function App() {
             <Link to="/lap2" className="hover:text-gray-200">
               lap2
             </Link>
+            <Link to="/lap3" className="hover:text-gray-200">
+              lap3
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/login" className="hover:text-gray-200">
               Đăng nhập
             </Link>
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/register" className="hover:text-gray-200">
               Đăng ký
             </Link>
           </div>
@@ -89,6 +95,9 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/lap2" element={<Lap2 />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/add" element={<AddPro />} />
       </Routes>
       <Toaster />
     </>

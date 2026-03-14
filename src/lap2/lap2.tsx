@@ -71,7 +71,7 @@ const lap2 = () => {
     {
       title: "Action",
       dataIndex: "action",
-      render: (_, record) => (
+      render: () => (
         <>
           <Tag color={"blue"}>Edit</Tag>
           <Tag color={"red"}>Delete</Tag>
@@ -111,7 +111,11 @@ const lap2 = () => {
       <Table columns={column} dataSource={data} />
       <h2 className="text-4xl font-bold mb-4">bai 3</h2>
 
-      <Table columns={column2} dataSource={data2} />
+      <Table
+        columns={column2}
+        dataSource={data2}
+        pagination={{ pageSize: 2 }}
+      />
     </div>
   );
 };
