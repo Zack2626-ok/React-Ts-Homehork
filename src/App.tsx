@@ -9,6 +9,7 @@ import Lap2 from "./lap2/lap2";
 import LoginForm from "./lap3/Login";
 import Register from "./lap3/Register";
 import AddPro from "./lap3/AddPro";
+import StoryForm from "./lap4/lap4";
 function App() {
   // const onFinish = (value: number | string) => {
   //   console.log("hello");
@@ -98,6 +99,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<Register />} />
         <Route path="/add" element={<AddPro />} />
+        <Route path="/lap4" element={<StoryForm />} />
       </Routes>
       <Toaster />
     </>

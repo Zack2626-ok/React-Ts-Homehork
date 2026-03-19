@@ -1,4 +1,19 @@
 {
-  "products": [],
+  "stories": [
+    {
+      "title": "123123",
+      "author": "adasdasd",
+      "image": "https://picsum.photos/id/242/200/300",
+      "description": "123",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "title": "123",
+      "description": "123",
+      "id": 1
+    }
+  ],
   "users": []
 }
