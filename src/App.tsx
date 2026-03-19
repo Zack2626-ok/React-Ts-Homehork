@@ -10,6 +10,7 @@ import LoginForm from "./lap3/Login";
 import Register from "./lap3/Register";
 import AddPro from "./lap3/AddPro";
 import StoryForm from "./lap4/lap4";
+import StoryList from "./lap5/lap5";
 function App() {
   // const onFinish = (value: number | string) => {
   //   console.log("hello");
@@ -100,6 +101,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/add" element={<AddPro />} />
         <Route path="/lap4" element={<StoryForm />} />
+        <Route path="/lap5" element={<StoryList />} />
       </Routes>
       <Toaster />
     </>
