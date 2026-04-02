@@ -7,5 +7,36 @@
       "id": 1
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "thezach2626@gmail.com",
+      "password": "$2a$10$hfIfS.mwQuCdSCNRwNP9WekprxOZZYvLKYmcdqRm14PkWFytJ68fq",
+      "username": "toanbin2905",
+      "id": 1
+    },
+    {
+      "email": "thezach2621116@gmail.com",
+      "password": "$2a$10$TytdqIkRwGuoyHWHc0RS7OvJR2GeqmcuCmemTJDXNy5Jj2dPsec3.",
+      "username": "toanbin2905",
+      "id": 2
+    },
+    {
+      "email": "thezach2611126@gmail.com",
+      "password": "$2a$10$SkuNro4GsHN8zjv/nqOjBeWsxsGcOiV1yCFkzdq0LlKFMjuXeThNe",
+      "username": "toilaadmin",
+      "id": 3
+    },
+    {
+      "email": "thezach261126@gmail.com",
+      "password": "$2a$10$s1RiEfYsv6EKI6H4rNd.DuadhQ7JPGk4E/eOUe2Z.9PbpdaghTEN6",
+      "username": "haylamcon121",
+      "id": 4
+    },
+    {
+      "email": "zaxk2905@gmail.com",
+      "password": "$2a$10$RIr0Wdr6SVv1VXCGMpDHfubgYJ3smW4IC4uGGt77E4M9qhQHEKicG",
+      "username": "zaxk2905@gmail.com",
+      "id": 5
+    }
+  ]
 }

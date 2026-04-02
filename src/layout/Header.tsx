@@ -1,18 +1,27 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../context/UserContext";
+import { useAuthStore } from "../lap8/useAuthStore";
 
 const Header = () => {
   const context = useContext(UserContext);
-  useEffect(() => {
-    setUser({
-      name: "baotoan",
-      avata:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB9w0XHOd_61tve7GSsxF4GWtm0k0a5gfp5g&s",
-    });
-  }, []);
+  // useEffect(() => {
+  //   setUser({
+  //     name: "baotoan",
+  //     avata:
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB9w0XHOd_61tve7GSsxF4GWtm0k0a5gfp5g&s",
+  //   });
+  // }, []);
+  const { setUser2 } = useAuthStore();
+  const getAuth = () => {
+    const data = localStorage.getItem("auth-storage");
+    return data ? JSON.parse(data) : null;
+  };
+  const name = getAuth()?.state?.user?.username;
+  console.log(name);
+
   if (!context) return null;
-  const { user, setUser } = context;
+  const { user } = context;
   const { themeColor } = context;
   const { toggleTheme } = context;
 
@@ -52,7 +61,7 @@ const Header = () => {
       ;{/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <div className="d-flex">
-          <p className="text-4xl">xin chao {user?.name}</p>
+          <p className="text-4xl">xin chao {name}</p>
           <img src={user?.avata} alt="" />
         </div>
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>

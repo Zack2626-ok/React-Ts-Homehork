@@ -3,15 +3,18 @@
 // import { useState } from "react";
 
 import { Toaster } from "react-hot-toast";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Lap2 from "./lap2/lap2";
-import LoginForm from "./lap3/Login";
-import Register from "./lap3/Register";
+// import LoginForm from "./lap3/Login";
+// import Register from "./lap3/Register";
+
 import AddPro from "./lap3/AddPro";
 import StoryForm from "./lap4/lap4";
 import StoryList from "./lap5/lap5";
 import Header from "./layout/Header";
+import Login from "./login/login";
+import Register2 from "./register/register";
 function App() {
   // const onFinish = (value: number | string) => {
   //   console.log("hello");
@@ -25,8 +28,8 @@ function App() {
         <Route path="/" element={<Header />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/lap2" element={<Lap2 />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register2 />} />
         <Route path="/add" element={<AddPro />} />
         <Route path="/lap4" element={<StoryForm />} />
         <Route path="/lap5" element={<StoryList />} />
